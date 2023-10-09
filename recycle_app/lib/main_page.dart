@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:recycle_app/catalog.dart';
+import 'package:recycle_app/quiz.dart';
 import 'package:recycle_app/whyRecycle.dart';
-import 'package:recycle_app/why.dart';
+import 'package:recycle_app/howToRecycle.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -46,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) =>  allLists(),
+                        builder: (context) =>  rec(),
                       ),
                     );
                   },
@@ -70,12 +72,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 ElevatedButton(
                   onPressed: () {
                     
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) => const view(),
-                    //   ),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>  howToMain(),
+                      ),
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color.fromARGB(255, 22, 155, 36),
@@ -97,12 +99,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 ElevatedButton(
                   onPressed: () {
                    
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) => const speech(),
-                    //   ),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => view(),
+                      ),
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color.fromARGB(255, 22, 155, 36),
@@ -124,6 +126,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 ElevatedButton(
                   onPressed: () async {
                 
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => MCQPage(),
+                      ),
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color.fromARGB(255, 22, 155, 36),

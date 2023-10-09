@@ -61,5 +61,6 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/recycle.png
-    - images/recycling-304974_640.png
+    - assets/images/recycle.png
+    - assets/images/recycling-304974_640.png
+    - assets/videos/video (2160p).mp4

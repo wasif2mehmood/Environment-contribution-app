@@ -42,7 +42,7 @@ class _welcome_pageState extends State<welcome_page> {
               child: Align(
                 alignment: Alignment.center,
                 child: Image.asset(
-                  "images/recycling-304974_640.png",
+                  "assets/images/recycling-304974_640.png",
                   width: 150,
                   fit: BoxFit.scaleDown,
                 ),

@@ -1,26 +1,47 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
-
-class view extends StatefulWidget {
-  const view({super.key});
+class catalog extends StatefulWidget {
+  const catalog({super.key});
 
   @override
-  State<view> createState() => _viewState();
+  State<catalog> createState() => _catalogState();
 }
 
-class _viewState extends State<view> {
+class _catalogState extends State<catalog> {
   List<Map<String, dynamic>> record = [
     {
-      "title": "Note 1",
+      "title": "Home Waste",
       "desc": "Description for Note 1",
-      "date": "2023-10-09T12:34:56",
-      "image":"assets/images/recycle.png"
+      "image": "assets/images/recycle-296463_1280.png"
     },
     {
-      "title": "Note 2",
+      "title": "Metal Waste",
       "desc": "Description for Note 2",
-      "date": "2023-10-10T14:45:30",
-      "image":"assets/images/rapidNotes.png"
+      "image": "assets/images/recycle-bin-155904_1280.png"
+    },
+    {
+      "title": "Plastic Waste",
+      "desc": "Description for Note 3",
+      "image": "assets/images/plastic-bag-4858198_1280.png"
+    },
+    {
+      'title': 'Earth Waste',
+      'desc': 'Description for Note 4',
+      "image": "assets/images/earth-575528_1280.png"
+    },
+    {
+      'title': 'Food Waste',
+      'desc': 'Description for Note 5',
+      "image": "assets/images/compost-7808401_1280.png"
+    },
+    {
+      'title': 'Paper Waste',
+      'desc': 'Description for Note 6',
+      "image": "assets/images/recycle-296463_1280.png"
+    },
+    {
+      'title': 'Glass Waste',
+      'desc': 'Description for Note 7',
+      "image": "assets/images/recycle-29231_1280.png"
     }
   ];
   List<Map<String, dynamic>> results = [];
@@ -82,8 +103,8 @@ class _viewState extends State<view> {
                 onChanged: (value) => filter(value),
                 decoration: const InputDecoration(
                     labelText: 'Search',
-                    labelStyle:
-                        TextStyle(color: Color.fromARGB(255, 0, 128, 70), fontSize: 20),
+                    labelStyle: TextStyle(
+                        color: Color.fromARGB(255, 0, 128, 70), fontSize: 20),
                     suffixIcon: Icon(Icons.search),
                     suffixIconColor: Color.fromARGB(255, 0, 128, 70)),
               ),
@@ -113,28 +134,16 @@ class _viewState extends State<view> {
                                   fontSize: 16,
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
-                                child: Text(
-                                  DateFormat('dd MMM y –').add_jm().format(
-                                      DateTime.parse(
-                                          filteredItems[index]["date"])),
-                                  style: const TextStyle(
-                                    fontSize: 12,
-                                    color: Color(0xff0818A8),
-                                  ),
-                                ),
-                              ),
-                              
                             ],
                           ),
                           trailing: Image.asset(
-                                '${filteredItems[index]["image"]}', // Replace with the path to your image
-                                width: 50, // Adjust the width as needed
-                                height: 50, // Adjust the height as needed
-                              ),
+                            '${filteredItems[index]["image"]}', // Replace with the path to your image
+                            width: 50, // Adjust the width as needed
+                            height: 50, // Adjust the height as needed
+                          ),
                         ))))
           ],
-        ));
+        ),
+        );
   }
 }
